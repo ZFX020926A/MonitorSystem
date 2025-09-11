@@ -36,21 +36,7 @@ void test(string path){
     cout << "video = " << video << endl;
     cout << "log = " << log << endl;
 
-    // std::string ip = configMesg.getValue("ip");
-    // std::string port = configMesg.getValue("port");
-    // size_t threadNum = std::stoi(configMesg.getValue("threadNum"));
-    // size_t taskQueueSize = std::stoi(configMesg.getValue("taskQueueSize"));
-
-    // // 启动服务器
-    // SmartHomeMonitorServer server(ip, port, threadNum, taskQueueSize);
-    // server.shmsStart();
-
-    // // 主线程阻塞，或循环等待
-    // cout << "Server is running. Press Enter to exit..." << endl;
-    // cin.get();
-
-    // server.shmsStop();
-    // LogManger::getInstance().info("Server stopped.");
+ 
    
 }
 
