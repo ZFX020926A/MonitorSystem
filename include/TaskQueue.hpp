@@ -5,6 +5,7 @@
 
 #include "MutexLock.hpp"
 #include "Condition.hpp"
+#include "Task.hpp"
 
 #include <queue>
 #include <functional>
@@ -12,7 +13,7 @@
 using std::queue;
 using std::function;
 
-using Element = function<void()>;
+using Element = Task;
 
 class TaskQueue
 {
