@@ -1,6 +1,9 @@
 #ifndef __CONFIGURATION_H__
 #define __CONFIGURATION_H__
 
+// 此类用来加载和存储配置文件中的键值对
+
+
 #include <string>
 #include <map>
 

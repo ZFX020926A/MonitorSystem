@@ -1,6 +1,8 @@
 #ifndef __LOGMANGER_H__
 #define __LOGMANGER_H__
 
+// 此类用来初始化和管理日志系统
+
 #include <log4cpp/Category.hh>
 #include <log4cpp/RollingFileAppender.hh>
 #include <log4cpp/PatternLayout.hh>
