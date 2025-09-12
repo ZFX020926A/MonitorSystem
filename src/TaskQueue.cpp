@@ -15,7 +15,7 @@ TaskQueue::~TaskQueue()
 
 bool TaskQueue::full()
 {
-    return _taskQueue.size() == _taskQueueSize;
+    return _taskQueue.size() == static_cast<size_t>(_taskQueueSize);
 }
 
 bool TaskQueue::empty()

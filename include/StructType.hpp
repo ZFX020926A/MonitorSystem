@@ -2,8 +2,7 @@
 #define __STRUCTTYPE_H__
 
 // 此类中 将使用到的packet tlv等结构体进行封装
-// 同时 还定义了 enum TaskType用来表示packet和tlv的消息类型/
-
+// 同时 还定义了 enum TaskType用来表示packet和tlv的消息类型
 
 #include <string>
 #include <cstring>
@@ -12,72 +11,20 @@ using std::string;
 
 
 // 接收消息时 使用的包结构 
-class Packet
+struct Packet
 {
-    Packet(int type, int length, const string &msg)
-    : _type(type)
-    , _length(length)
-    , _msg(msg)
-    {}
-
-    ~Packet()
-    {}
-
-    int getType() const 
-    { 
-        return _type; 
-    }
-
-    int getLength() const 
-    { 
-        return _length; 
-    }
-
-    string getMsg() const 
-    { 
-        return _msg; 
-    }
-
-private:
-    int _type; // 此条消息的类型
-    int _length; // 此条消息的长度
-    string _msg;
+    int type;
+    int length;
+    string msg;
 };
 
 // 发送消息时使用的 TLV
-class TLV
+struct TLV
 {
-    TLV(int type, int length, const char *value)
-    : _type(type)
-    , _length(length)
-    {
-        memset(&_data, 0, sizeof(_data));
-        memcpy(_data, value, length);
-    }
-
-    ~TLV()
-    {}
-
-    int getType() const 
-    { 
-        return _type; 
-    }
-
-    int getLength() const 
-    { 
-        return _length; 
-    }
-
-    string getValue() const 
-    { 
-        return string(_data, _length); 
-    }
-private:
-    int _type; // 此条消息的类型
-    int _length; // 此条消息的长度
-    char _data[1024]; // 此条消息的值
+    int type;
+    int length;
+    char data[1024];
 };
-
 
 // 消息类型
 enum TaskType

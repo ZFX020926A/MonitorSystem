@@ -2,8 +2,8 @@
 
 
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
-INCLUDES = -Iinclude
+ CXXFLAGS = -std=c++11 -Wall
+ INCLUDES = -I./include
 SRC_DIR = src
 SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp)
 MAIN_TEST = $(wildcard test*.cpp)
