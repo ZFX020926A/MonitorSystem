@@ -3,3 +3,6 @@
 2025-09-12 13:46:58,919  [INFO] UserLoginSection1::process(): get setting : $y$j9T$DoHgEZagWT9pW3FaUMnC60$
 2025-09-12 13:50:42,048  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:41844has closed.
 
+2025-09-12 17:04:17,277  [INFO] MySql connect success
+2025-09-12 17:04:17,408  [INFO] MySql readOperationQuery success, rows: 8, cols: 4
+2025-09-12 17:04:17,408  [INFO] MySql dump result begin
