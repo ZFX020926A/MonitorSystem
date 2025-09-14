@@ -5,6 +5,7 @@
 #include "Socket.hpp"
 #include "InetAddress.hpp"
 #include "SocketIO.hpp"
+#include "StructType.hpp"
 
 #include <memory>
 #include <string>

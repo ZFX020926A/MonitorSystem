@@ -99,19 +99,41 @@ int main(int argc, char const *argv[])
     // 读取配置文件
     configMesg.loadFromFile(path);
    
+    SmartHomeMonitorServer server(configMesg.getValue("ip"), 
+                                configMesg.getValue("port"), 
+                                atoi(configMesg.getValue("thread_num").c_str()), 
+                                atoi(configMesg.getValue("task_num").c_str()));
+
+    
 
     // 初始化日志模块
     LogManger::Init(configMesg.getValue("log_file"));
 
     MySql myclient;
-    myclient.connect("8.148.74.118", "root", "1234", "Student", 3306);
+    myclient.connect("8.148.74.118", "root", "1234", "UserMesage", 3306);
+    // 创建
+    string sql1 = "CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))"; 
+    myclient.writeOperationQuery(sql1);
+
+    server.start();
+    // while (1)
+    // {
+    //     /* code */
+    // }
     
 
-    //string sql1 = "INSERT INTO person VALUES(14, 'beiliya', 40, 60, 60, 60)";
-    //myclient.writeOperationQuery(sql1);
-    string sql2 = "select * from student";
-    vector<vector<string>> res = myclient.readOperationQuery(sql2);
+    // string sql2 = "INSERT INTO user(name, setting, encrypt) VALUES('用户名', 'md5前缀+盐值', '加密密文')";
+    // myclient.writeOperationQuery(sql2);
+    string sql3 = "select * from user";
+    vector<vector<string>> res = myclient.readOperationQuery(sql3);
     MySql::dump(res);
 
 	return 0;
 }
+
+//  create DATABASE IF NOT EXISTS UserMesage;
+//                    主键                               用户名             MD5前缀+盐值      加密密文
+// "CREATE TABLE user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR, encrypt CHAR)"; 
+// myclient.writeOperationQuery(sql1);
+
+// "INSERT INTO user(name, setting, encrypt) VALUES('用户名', 'md5前缀+盐值', '加密密文')";

@@ -6,3 +6,220 @@
 2025-09-12 17:04:17,277  [INFO] MySql connect success
 2025-09-12 17:04:17,408  [INFO] MySql readOperationQuery success, rows: 8, cols: 4
 2025-09-12 17:04:17,408  [INFO] MySql dump result begin
+2025-09-12 17:24:19,851  [INFO] MySql connect success
+2025-09-12 17:24:21,965  [INFO] MySql writeOperationQuery success ： CREATE TABLE abc(id INT, name VARCHAR(20), age INT, birth DATE, chinese INT)
+2025-09-12 17:24:22,088  [ERROR] MySql writeOperationQuery error (1292, Incorrect date value: '1997' for column 'birth' at row 1) ： INSERT INTO abc VALUES(14, 'beiliya', 40, 1999-01-01, 60)
+2025-09-12 17:24:22,097  [INFO] MySql readOperationQuery success, but no data  
+2025-09-12 17:24:22,097  [INFO] MySql dump result
+2025-09-12 17:31:12,522  [INFO] MySql connect success
+2025-09-12 17:31:12,893  [INFO] MySql writeOperationQuery success ： CREATE TABLE ab(id INT, name VARCHAR(20), age INT, birth DATE, chinese INT)
+2025-09-12 17:31:12,916  [ERROR] MySql writeOperationQuery error (1292, Incorrect date value: '1997' for column 'birth' at row 1) ： INSERT INTO ab(id, name, age, birth, chinese) VALUES(14, 'beiliya', 40, 1999-01-01, 60)
+2025-09-12 17:31:12,918  [INFO] MySql readOperationQuery success, but no data  
+2025-09-12 17:31:12,918  [INFO] MySql dump result
+2025-09-12 17:32:51,232  [INFO] MySql connect success
+2025-09-12 17:32:51,981  [INFO] MySql writeOperationQuery success ： CREATE TABLE a(id INT, name VARCHAR(20), age INT, birth DATE, chinese INT)
+2025-09-12 17:32:52,148  [INFO] MySql writeOperationQuery success ： INSERT INTO a(id, name, age, birth, chinese) VALUES(14, 'beiliya', 40, '1999-01-01', 60)
+2025-09-12 17:32:52,153  [INFO] MySql readOperationQuery success, rows: 1, cols: 5
+2025-09-12 17:32:52,153  [INFO] MySql dump result
+2025-09-13 13:04:51,626  [INFO] MySql connect success
+2025-09-13 13:04:53,203  [INFO] MySql writeOperationQuery success ： CREATE TABLE user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR, encrypt CHAR)
+2025-09-13 13:19:36,799  [INFO] MySql connect success
+2025-09-13 13:19:36,936  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR, encrypt CHAR)
+2025-09-13 13:19:46,212  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:33128has connected.
+
+2025-09-13 13:20:00,569  [INFO] UserLoginSection1::process() : receive username : zfx
+2025-09-13 13:20:00,632  [INFO] MySql connect success
+2025-09-13 13:20:00,665  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 13:20:00,666  [ERROR] UserLoginSection1::process() : login failed, not in user : zfx
+2025-09-13 13:20:32,701  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:33128has closed.
+
+2025-09-13 14:55:19,993  [INFO] MySql connect success
+2025-09-13 14:55:20,213  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR, encrypt CHAR)
+2025-09-13 14:56:02,005  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:46108has connected.
+
+2025-09-13 14:56:12,912  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 14:56:12,995  [INFO] MySql connect success
+2025-09-13 14:56:13,035  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 14:56:13,036  [INFO] UserLoginSection1::process() : nihao register successful and generate setting : $1$w26aD27m$
+2025-09-13 14:56:13,056  [ERROR] MySql writeOperationQuery error (1406, Data too long for column 'setting' at row 1) ： INSERT INTO user (name, setting) VALUES ('nihao', '$1$w26aD27m$')
+2025-09-13 14:56:13,064  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 14:56:31,518  [INFO] UserLoginSection2::process() : receive passwd : $1$w26aD27m$hzdbibciui
+2025-09-13 14:56:31,574  [INFO] MySql connect success
+2025-09-13 16:25:43,158  [INFO] MySql connect success
+2025-09-13 16:25:43,316  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 16:26:00,904  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:40162has connected.
+
+2025-09-13 16:26:17,072  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 16:26:17,150  [INFO] MySql connect success
+2025-09-13 16:26:17,175  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 16:26:17,175  [INFO] UserLoginSection1::process() : nihao register successful and generate setting : $1$45nt9XZa$
+2025-09-13 16:26:17,197  [ERROR] MySql writeOperationQuery error (1406, Data too long for column 'setting' at row 1) ： INSERT INTO user (name, setting) VALUES ('nihao', '$1$45nt9XZa$')
+2025-09-13 16:26:17,202  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 16:26:40,151  [INFO] UserLoginSection2::process() : receive passwd : $1$45nt9XZa$nihaonihaonihao
+2025-09-13 16:26:40,212  [INFO] MySql connect success
+2025-09-13 16:43:22,175  [INFO] MySql connect success
+2025-09-13 16:43:22,350  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 16:43:31,438  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:44712has connected.
+
+2025-09-13 16:43:37,280  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 16:43:37,326  [INFO] MySql connect success
+2025-09-13 16:43:37,391  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 16:43:37,392  [INFO] UserLoginSection1::process() : nihao register successful and generate setting : $1$2clw71Jn$
+2025-09-13 16:43:37,412  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('nihao', '$1$2clw71Jn$')
+2025-09-13 16:43:37,414  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-13 16:43:37,415  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 1
+2025-09-13 16:43:58,987  [INFO] UserLoginSection2::process() : receive passwd : $1$2clw71Jn$nihaonihaonihao
+2025-09-13 16:43:59,034  [INFO] MySql connect success
+2025-09-13 16:43:59,045  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 16:43:59,059  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = 'nihaonihaonihao' WHERE name = 'nihao'
+2025-09-13 16:43:59,059  [INFO] UserLoginSection2::process() : register success : $1$2clw71Jn$nihaonihaonihao
+2025-09-13 16:45:32,822  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:44712has closed.
+
+2025-09-13 16:45:34,701  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:49722has connected.
+
+2025-09-13 16:45:39,855  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 16:45:39,913  [INFO] MySql connect success
+2025-09-13 16:45:39,919  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 16:45:39,919  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 16:45:39,919  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 16:45:52,346  [INFO] UserLoginSection2::process() : receive passwd : $1$2clw71Jn$nihaonihaonihao
+2025-09-13 16:45:52,397  [INFO] MySql connect success
+2025-09-13 16:45:52,397  [ERROR] UserLoginSection2::process() : passwd error : nihao
+2025-09-13 16:46:59,071  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:49722has closed.
+
+2025-09-13 16:47:00,617  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:53046has connected.
+
+2025-09-13 16:47:11,677  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 16:47:11,720  [INFO] MySql connect success
+2025-09-13 16:47:11,726  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 16:47:11,726  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 16:47:11,726  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 16:47:27,708  [INFO] UserLoginSection2::process() : receive passwd : $1$2clw71Jn$nihaonihaonihao
+2025-09-13 16:47:27,755  [INFO] MySql connect success
+2025-09-13 16:47:27,755  [ERROR] UserLoginSection2::process() : passwd error : nihao
+2025-09-13 16:47:52,060  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:53046has closed.
+
+2025-09-13 16:55:43,163  [INFO] MySql connect success
+2025-09-13 16:55:43,461  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 16:55:48,371  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:59518has connected.
+
+2025-09-13 16:55:53,673  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 16:55:53,992  [INFO] MySql connect success
+2025-09-13 16:55:54,041  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 16:55:54,042  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 16:55:54,042  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 16:56:03,808  [INFO] UserLoginSection2::process() : receive passwd : $1$2clw71Jn$nihaonihaonihao
+2025-09-13 16:56:03,896  [INFO] MySql connect success
+2025-09-13 16:56:03,896  [ERROR] UserLoginSection2::process() : passwd error : nihao
+2025-09-13 16:56:13,021  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:59518has closed.
+
+2025-09-13 16:58:51,797  [INFO] MySql connect success
+2025-09-13 16:58:51,993  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 16:58:55,480  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:48994has connected.
+
+2025-09-13 16:58:59,733  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 16:58:59,951  [INFO] MySql connect success
+2025-09-13 16:58:59,991  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 16:58:59,991  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 16:58:59,991  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 16:59:14,672  [INFO] UserLoginSection2::process() : receive passwd : $1$2clw71Jn$nihaonihaonihao
+2025-09-13 16:59:14,734  [INFO] MySql connect success
+2025-09-13 16:59:14,735  [ERROR] UserLoginSection2::process() : passwd error : nihao
+2025-09-13 17:03:59,117  [INFO] MySql connect success
+2025-09-13 17:03:59,332  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 17:04:02,647  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:40738has connected.
+
+2025-09-13 17:04:09,242  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 17:04:09,519  [INFO] MySql connect success
+2025-09-13 17:04:09,565  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:04:09,565  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 17:04:09,565  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 17:08:48,782  [INFO] MySql connect success
+2025-09-13 17:08:48,834  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 17:08:54,842  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:33016has connected.
+
+2025-09-13 17:08:58,453  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 17:08:58,672  [INFO] MySql connect success
+2025-09-13 17:08:58,713  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:08:58,713  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 17:08:58,713  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 17:09:05,871  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:33016has closed.
+
+2025-09-13 17:10:53,899  [INFO] MySql connect success
+2025-09-13 17:10:53,942  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 17:10:58,058  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:35246has connected.
+
+2025-09-13 17:11:01,052  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 17:11:01,148  [INFO] MySql connect success
+2025-09-13 17:11:01,168  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:11:01,168  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 17:11:01,168  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 17:11:10,638  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:35246has closed.
+
+2025-09-13 17:17:39,234  [INFO] MySql connect success
+2025-09-13 17:17:39,393  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 17:17:53,446  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:45596has connected.
+
+2025-09-13 17:17:57,773  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-13 17:17:58,033  [INFO] MySql connect success
+2025-09-13 17:17:58,119  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:17:58,119  [INFO] UserLoginSection1::process() : get nihao setting : $1$2clw71Jn$
+2025-09-13 17:17:58,119  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-13 17:18:11,103  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:45596has closed.
+
+2025-09-13 17:18:13,100  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:38772has connected.
+
+2025-09-13 17:18:22,166  [INFO] UserLoginSection1::process() : receive username : root
+2025-09-13 17:18:22,266  [INFO] MySql connect success
+2025-09-13 17:18:22,281  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 17:18:22,281  [INFO] UserLoginSection1::process() : root register successful and generate setting : $1$5WHZhwl5$
+2025-09-13 17:18:22,348  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('root', '$1$5WHZhwl5$')
+2025-09-13 17:18:22,354  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-13 17:18:22,354  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 2
+2025-09-13 17:18:32,226  [INFO] UserLoginSection2::process() : receive passwd : $1$5WHZhwl5$rootroot
+2025-09-13 17:18:32,309  [INFO] MySql connect success
+2025-09-13 17:18:32,319  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:18:32,355  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$5WHZhwl5$rootroot' WHERE name = 'root'
+2025-09-13 17:18:32,355  [INFO] UserLoginSection2::process() : register success : $1$5WHZhwl5$rootroot
+2025-09-13 17:19:01,664  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:38772has closed.
+
+2025-09-13 17:19:04,502  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:35068has connected.
+
+2025-09-13 17:19:08,011  [INFO] UserLoginSection1::process() : receive username : root
+2025-09-13 17:19:08,209  [INFO] MySql connect success
+2025-09-13 17:19:08,223  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:19:08,223  [INFO] UserLoginSection1::process() : get root setting : $1$5WHZhwl5$
+2025-09-13 17:19:08,223  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-13 17:19:16,961  [INFO] UserLoginSection2::process() : receive passwd : $1$5WHZhwl5$rootroot
+2025-09-13 17:19:17,009  [INFO] MySql connect success
+2025-09-13 17:19:17,009  [ERROR] UserLoginSection2::process() : passwd error : root
+2025-09-13 17:25:15,763  [INFO] MySql connect success
+2025-09-13 17:25:15,830  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-13 17:25:22,400  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:55174has connected.
+
+2025-09-13 17:25:28,267  [INFO] UserLoginSection1::process() : receive username : abc
+2025-09-13 17:25:28,338  [INFO] MySql connect success
+2025-09-13 17:25:28,370  [INFO] MySql readOperationQuery success, but no data  
+2025-09-13 17:25:28,370  [INFO] UserLoginSection1::process() : abc register successful and generate setting : $1$U05mVjQH$
+2025-09-13 17:25:28,391  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('abc', '$1$U05mVjQH$')
+2025-09-13 17:25:28,392  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-13 17:25:28,393  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 3
+2025-09-13 17:25:38,781  [INFO] UserLoginSection2::process() : receive passwd : $1$U05mVjQH$abcabc
+2025-09-13 17:25:38,856  [INFO] MySql connect success
+2025-09-13 17:25:38,869  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:25:38,891  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$U05mVjQH$abcabc' WHERE name = 'abc'
+2025-09-13 17:25:38,892  [INFO] UserLoginSection2::process() : register success : $1$U05mVjQH$abcabc
+2025-09-13 17:25:46,201  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:55174has closed.
+
+2025-09-13 17:25:48,002  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:41716has connected.
+
+2025-09-13 17:25:52,804  [INFO] UserLoginSection1::process() : receive username : abc
+2025-09-13 17:25:52,862  [INFO] MySql connect success
+2025-09-13 17:25:52,874  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-13 17:25:52,874  [INFO] UserLoginSection1::process() : get abc setting : $1$U05mVjQH$
+2025-09-13 17:25:52,875  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 3
+2025-09-13 17:26:02,754  [INFO] UserLoginSection2::process() : receive passwd : $1$U05mVjQH$abcabc
+2025-09-13 17:26:03,082  [INFO] MySql connect success
+2025-09-13 17:26:03,082  [INFO] UserLoginSection2::process() : passwd correct : abc
+2025-09-13 17:34:30,041  [INFO] tcptcp 172.29.254.59:8000 --> 198.235.24.153:63974has connected.
+

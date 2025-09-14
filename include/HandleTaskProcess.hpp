@@ -15,10 +15,7 @@ public:
 
     //业务逻辑的处理
     void process();
-
-private:
-    void getSetting(string & s, const char * passwd);
-
+    
 private:
     TcpConnectionPtr _conn;
     Packet _packet;
@@ -42,6 +39,11 @@ private:
     TcpConnectionPtr _conn;
     Packet _packet;
 };
+
+
+void getSetting(string & hash, const char * passwd);
+
+char* GenRandomString(int length);
 
 #endif // !__HANDLETASKPROCESS_H__
 
