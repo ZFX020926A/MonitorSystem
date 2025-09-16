@@ -13,7 +13,7 @@ TARGET = testApp
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(TARGET) $(OBJS) -llog4cpp -lmysqlclient
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(TARGET) $(OBJS) -llog4cpp -lmysqlclient -lavformat -lavcodec -lavutil -lswscale
 
 clean:
 	rm -f $(TARGET)

@@ -221,10 +221,20 @@ void UserLoginSection2::process()
         // 修改用户状态
         user->_status = USER_HAS_LOGIN;
         
-        // 登录成功
+        // 登录成功    之后查询设备表， 将通道数进行 使用data字段进行返回给Qt客户端 ，以便展示设备信息
+        
+        // 读取数据库中的deviceTable表
+        string sql = "SELECT * FROM deviceTable";
+        vector<vector<string>> deviceres = myclient.readOperationQuery(sql);
+        
+        // 取出表中的channels的值，增加越界检查和类型转换
+        string channels = deviceres[1][3];
+        
         TLV tlv;
         tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_OK;
-        tlv.length = 0; // 不需要发送消息体了
+        tlv.length = channels.length(); // 不需要发送消息体了
+        strcpy(tlv.data, channels.c_str());
+        // 发送通道数给客户端
         _conn->sendInLoop(tlv);
         cout << tlv.type << " : " << tlv.length << " : " << tlv.data << endl;
         return ;

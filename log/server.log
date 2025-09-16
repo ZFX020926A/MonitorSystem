@@ -348,3 +348,9 @@
 2025-09-16 11:00:41,389  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
 2025-09-16 11:04:30,645  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:59039has connected.
 
+2025-09-16 13:03:19,544  [INFO] MySql connect success
+2025-09-16 13:03:19,578  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-16 20:20:50,954  [ERROR] FFmpegVideo::readFrame() : decode video frame failed for url: rtsp://admin:admin@192.168.105.222/live/chn=0
+2025-09-16 20:29:17,005  [ERROR] FFmpegVideo::readFrame() : decode video frame failed for url: rtsp://admin:admin@192.168.105.222/live/chn=0
+2025-09-16 20:33:47,975  [ERROR] FFmpegVideo::readFrame() : decode video frame failed for url: rtsp://admin:admin@192.168.105.222/live/chn=0
+2025-09-16 20:37:31,977  [ERROR] FFmpegVideo::readFrame() : decode video frame failed for url: rtsp://admin:admin@192.168.105.222/live/chn=0
