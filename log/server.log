@@ -223,3 +223,128 @@
 2025-09-13 17:26:03,082  [INFO] UserLoginSection2::process() : passwd correct : abc
 2025-09-13 17:34:30,041  [INFO] tcptcp 172.29.254.59:8000 --> 198.235.24.153:63974has connected.
 
+2025-09-15 21:58:07,769  [ERROR] MySql connect error (2003, Can't connect to MySQL server on '8.148.74.118:3306' (111))
+2025-09-15 21:58:07,771  [ERROR] MySql writeOperationQuery error (2013, Lost connection to MySQL server during query) ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-15 21:58:23,426  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:53900has connected.
+
+2025-09-15 21:59:00,952  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:53900has closed.
+
+2025-09-15 21:59:00,955  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:53928has connected.
+
+2025-09-15 21:59:00,955  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:53945has connected.
+
+2025-09-15 22:11:24,538  [ERROR] MySql connect error (2003, Can't connect to MySQL server on '8.148.74.118:3306' (111))
+2025-09-15 22:11:24,541  [ERROR] MySql writeOperationQuery error (2013, Lost connection to MySQL server during query) ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-15 22:11:33,690  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:54943has connected.
+
+2025-09-15 22:15:51,022  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:54943has closed.
+
+2025-09-15 22:15:51,024  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:54974has connected.
+
+2025-09-15 22:15:51,024  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:55607has connected.
+
+2025-09-15 22:16:26,550  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:54974has closed.
+
+2025-09-15 22:16:52,999  [ERROR] MySql connect error (2003, Can't connect to MySQL server on '8.148.74.118:3306' (111))
+2025-09-15 22:16:52,999  [ERROR] MySql writeOperationQuery error (2013, Lost connection to MySQL server during query) ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-15 22:17:32,047  [ERROR] MySql connect error (2003, Can't connect to MySQL server on '8.148.74.118:3306' (111))
+2025-09-15 22:17:32,047  [ERROR] MySql writeOperationQuery error (2013, Lost connection to MySQL server during query) ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-15 22:19:40,932  [ERROR] MySql connect error (2003, Can't connect to MySQL server on '8.148.74.118:3306' (111))
+2025-09-15 22:19:40,932  [ERROR] MySql writeOperationQuery error (2013, Lost connection to MySQL server during query) ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-15 22:25:17,016  [INFO] MySql connect success
+2025-09-15 22:25:17,101  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-15 22:35:13,388  [INFO] MySql connect success
+2025-09-15 22:35:13,404  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-15 22:35:13,681  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:57311has connected.
+
+2025-09-16 10:51:27,689  [INFO] MySql connect success
+2025-09-16 10:51:27,919  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-16 10:51:33,987  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:44236has connected.
+
+2025-09-16 10:51:37,949  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:44236has closed.
+
+2025-09-16 10:51:43,455  [INFO] MySql connect success
+2025-09-16 10:51:43,470  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-16 10:51:47,001  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:34932has connected.
+
+2025-09-16 10:51:53,196  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-16 10:51:53,421  [INFO] MySql connect success
+2025-09-16 10:51:53,481  [INFO] MySql readOperationQuery success, but no data  
+2025-09-16 10:51:53,481  [INFO] UserLoginSection1::process() : nihao register successful and generate setting : $1$v7oBa4kK$
+2025-09-16 10:51:53,544  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('nihao', '$1$v7oBa4kK$')
+2025-09-16 10:51:53,549  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-16 10:51:53,549  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 1
+2025-09-16 10:51:58,343  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:34932has closed.
+
+2025-09-16 10:52:31,568  [INFO] MySql connect success
+2025-09-16 10:52:31,597  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-16 10:52:44,034  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:58716has connected.
+
+2025-09-16 10:52:59,337  [INFO] UserLoginSection1::process() : receive username : nihao
+2025-09-16 10:52:59,416  [INFO] MySql connect success
+2025-09-16 10:52:59,437  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-16 10:52:59,437  [ERROR] UserLoginSection1::process() : nihao user already exists  
+2025-09-16 10:53:04,429  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:58716has closed.
+
+2025-09-16 10:53:11,149  [INFO] MySql connect success
+2025-09-16 10:53:11,171  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-16 10:53:15,432  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:35224has connected.
+
+2025-09-16 10:53:19,617  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-16 10:53:19,679  [INFO] MySql connect success
+2025-09-16 10:53:19,691  [INFO] MySql readOperationQuery success, but no data  
+2025-09-16 10:53:19,691  [INFO] UserLoginSection1::process() : okk register successful and generate setting : $1$e9AQ5987$
+2025-09-16 10:53:19,711  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('okk', '$1$e9AQ5987$')
+2025-09-16 10:53:19,713  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-16 10:53:19,713  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 2
+2025-09-16 10:53:29,573  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-16 10:53:29,620  [INFO] MySql connect success
+2025-09-16 10:53:29,632  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-16 10:53:29,658  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$e9AQ5987$nnsggxh' WHERE name = 'okk'
+2025-09-16 10:53:29,658  [INFO] UserLoginSection2::process() : register success : $1$e9AQ5987$nnsggxh
+2025-09-16 10:54:02,530  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:35224has closed.
+
+2025-09-16 10:54:07,204  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:58194has connected.
+
+2025-09-16 10:54:11,480  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-16 10:54:11,521  [INFO] MySql connect success
+2025-09-16 10:54:11,527  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-16 10:54:11,527  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-16 10:54:11,527  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-16 10:54:28,565  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$$1$e9AQ5987$nnsggxh
+2025-09-16 10:54:28,607  [INFO] MySql connect success
+2025-09-16 10:54:28,607  [ERROR] UserLoginSection2::process() : passwd error : okk
+2025-09-16 10:54:54,809  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:58194has closed.
+
+2025-09-16 10:54:56,686  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:33934has connected.
+
+2025-09-16 10:55:35,874  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-16 10:55:35,916  [INFO] MySql connect success
+2025-09-16 10:55:35,921  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-16 10:55:35,922  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-16 10:55:35,922  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-16 10:55:52,285  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:33934has closed.
+
+2025-09-16 10:55:54,284  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:35890has connected.
+
+2025-09-16 10:55:58,281  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-16 10:55:58,325  [INFO] MySql connect success
+2025-09-16 10:55:58,334  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-16 10:55:58,334  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-16 10:55:58,334  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-16 10:56:01,260  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:35890has closed.
+
+2025-09-16 10:56:04,363  [INFO] tcptcp 172.29.254.59:8000 --> 8.148.74.118:59950has connected.
+
+2025-09-16 10:56:07,401  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-16 10:56:07,444  [INFO] MySql connect success
+2025-09-16 10:56:07,450  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-16 10:56:07,450  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-16 10:56:07,450  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-16 10:56:35,684  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-16 10:56:35,726  [INFO] MySql connect success
+2025-09-16 10:56:35,726  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-16 11:00:41,378  [INFO] MySql connect success
+2025-09-16 11:00:41,389  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-16 11:04:30,645  [INFO] tcptcp 172.29.254.59:8000 --> 59.173.138.98:59039has connected.
+
