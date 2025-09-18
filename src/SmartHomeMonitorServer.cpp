@@ -2,6 +2,8 @@
 #include "HandleTaskProcess.hpp"
 #include "StructType.hpp"
 #include "LogManger.hpp"
+#include "cameraPTZ.hpp"
+#include "FFmpegVideo.hpp"
 #include <iostream>
 
 using std::cout;
@@ -73,6 +75,20 @@ void SmartHomeMonitorServer::onMessage(TcpConnectionPtr conn)
         {
             UserLoginSection2 userLogin2(conn, packet);
             _threadpool.addTask(std::bind(&UserLoginSection2::process, userLogin2));
+        }
+        break;
+        case TASK_TYPE_CAMERA_PTZ_CONTROL: // 处理摄像头控制
+        {
+            cameraPTZ cameraPTZ(conn, packet);
+            _threadpool.addTask(std::bind(&cameraPTZ::process, cameraPTZ));
+        }
+        break;
+    case TASK_TYPE_GET_VIDEO_STREAM: // 处理获取视频流
+        {
+            auto ffmpegvideo = std::make_shared<FFmpegVideo>(conn, packet);
+            _threadpool.addTask([ffmpegvideo]() { 
+                ffmpegvideo->run(); 
+            });
         }
         break;
     }

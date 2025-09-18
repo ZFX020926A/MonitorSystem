@@ -354,3 +354,266 @@
 2025-09-16 20:29:17,005  [ERROR] FFmpegVideo::readFrame() : decode video frame failed for url: rtsp://admin:admin@192.168.105.222/live/chn=0
 2025-09-16 20:33:47,975  [ERROR] FFmpegVideo::readFrame() : decode video frame failed for url: rtsp://admin:admin@192.168.105.222/live/chn=0
 2025-09-16 20:37:31,977  [ERROR] FFmpegVideo::readFrame() : decode video frame failed for url: rtsp://admin:admin@192.168.105.222/live/chn=0
+2025-09-18 17:39:13,737  [INFO] MySql connect success
+2025-09-18 17:39:13,752  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 17:39:13,760  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 17:39:13,774  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 17:40:05,657  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:57824has connected.
+
+2025-09-18 17:40:13,686  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 17:40:13,762  [INFO] MySql connect success
+2025-09-18 17:40:13,770  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 17:40:13,770  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 17:40:13,770  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 17:40:37,142  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 17:40:37,211  [INFO] MySql connect success
+2025-09-18 17:40:37,211  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 17:40:37,225  [INFO] MySql readOperationQuery success, rows: 46, cols: 7
+2025-09-18 17:40:50,489  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:57824has closed.
+
+2025-09-18 17:42:03,197  [INFO] MySql connect success
+2025-09-18 17:42:03,208  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 17:42:03,218  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 17:42:03,230  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 17:44:16,578  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:46524has connected.
+
+2025-09-18 17:44:19,567  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 17:44:19,638  [INFO] MySql connect success
+2025-09-18 17:44:19,642  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 17:44:19,642  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 17:44:19,642  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 17:44:27,399  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 17:44:27,469  [INFO] MySql connect success
+2025-09-18 17:44:27,470  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 17:44:27,475  [INFO] MySql readOperationQuery success, rows: 47, cols: 7
+2025-09-18 17:44:50,958  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:46524has closed.
+
+2025-09-18 17:44:52,473  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:44776has connected.
+
+2025-09-18 17:44:54,495  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 17:44:54,565  [INFO] MySql connect success
+2025-09-18 17:44:54,573  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 17:44:54,573  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 17:44:54,573  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 17:44:56,467  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 17:44:56,541  [INFO] MySql connect success
+2025-09-18 17:44:56,541  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 17:44:56,550  [INFO] MySql readOperationQuery success, rows: 47, cols: 7
+2025-09-18 17:45:12,216  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:44776has closed.
+
+2025-09-18 17:45:20,456  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:52478has connected.
+
+2025-09-18 17:45:22,864  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 17:45:22,934  [INFO] MySql connect success
+2025-09-18 17:45:22,943  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 17:45:22,943  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 17:45:22,943  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 17:45:24,928  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 17:45:24,995  [INFO] MySql connect success
+2025-09-18 17:45:24,995  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 17:45:25,003  [INFO] MySql readOperationQuery success, rows: 47, cols: 7
+2025-09-18 17:47:48,458  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:52478has closed.
+
+2025-09-18 17:48:05,204  [INFO] MySql connect success
+2025-09-18 17:48:05,216  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 17:48:05,224  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 17:48:05,238  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 17:48:12,587  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:41648has connected.
+
+2025-09-18 17:48:15,309  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 17:48:15,375  [INFO] MySql connect success
+2025-09-18 17:48:15,383  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 17:48:15,383  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 17:48:15,383  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 17:48:19,403  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 17:48:19,472  [INFO] MySql connect success
+2025-09-18 17:48:19,472  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 17:48:19,482  [INFO] MySql readOperationQuery success, rows: 48, cols: 7
+2025-09-18 17:50:46,969  [INFO] MySql connect success
+2025-09-18 17:50:46,982  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 17:50:46,994  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 17:50:47,007  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 17:51:02,041  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:33052has connected.
+
+2025-09-18 17:51:03,469  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 17:51:03,541  [INFO] MySql connect success
+2025-09-18 17:51:03,548  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 17:51:03,548  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 17:51:03,548  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 17:51:15,800  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 17:51:15,874  [INFO] MySql connect success
+2025-09-18 17:51:15,874  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 17:51:15,883  [INFO] MySql readOperationQuery success, rows: 49, cols: 7
+2025-09-18 17:51:15,883  [INFO] cameraPTZ::run() : MD5 tocken 18a1ee1385ff11232116561fd53b8c8e
+2025-09-18 17:51:15,883  [INFO] cameraPTZ::run() : Sending PTZ command with URL: http://192.168.105.222/xsw/api/ptz/control?channelId=1&t=1673255651&value=l&token=18a1ee1385ff11232116561fd53b8c8e
+2025-09-18 17:51:15,991  [INFO] cameraPTZ::run() : MD5 tocken 9773b6ca5dcf8a6f944e8b8d3cd71eae
+2025-09-18 17:51:15,991  [INFO] cameraPTZ::run() : Sending PTZ command with URL: http://192.168.105.222/xsw/api/ptz/control?channelId=1&t=1673255651&value=s&token=9773b6ca5dcf8a6f944e8b8d3cd71eae
+2025-09-18 17:51:16,111  [INFO] cameraPTZ::process() : Executed PTZ command: l
+2025-09-18 19:54:11,442  [INFO] MySql connect success
+2025-09-18 19:54:11,458  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 19:54:11,466  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 19:54:11,477  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 19:55:01,283  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:60828has connected.
+
+2025-09-18 19:55:03,423  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 19:55:03,496  [INFO] MySql connect success
+2025-09-18 19:55:03,504  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 19:55:03,504  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 19:55:03,504  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 19:55:21,720  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 19:55:21,797  [INFO] MySql connect success
+2025-09-18 19:55:21,797  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 19:55:21,806  [INFO] MySql readOperationQuery success, rows: 50, cols: 7
+2025-09-18 19:55:23,412  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 19:55:23,413  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:60828has closed.
+
+2025-09-18 20:04:07,221  [INFO] MySql connect success
+2025-09-18 20:04:07,240  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:04:07,249  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:04:07,261  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:05:37,389  [INFO] MySql connect success
+2025-09-18 20:05:37,400  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:05:37,408  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:05:37,422  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:05:41,201  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:45030has connected.
+
+2025-09-18 20:05:43,310  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:05:43,385  [INFO] MySql connect success
+2025-09-18 20:05:43,394  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:05:43,394  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:05:43,394  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:05:54,584  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 20:05:54,661  [INFO] MySql connect success
+2025-09-18 20:05:54,661  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 20:05:54,671  [INFO] MySql readOperationQuery success, rows: 52, cols: 7
+2025-09-18 20:05:55,648  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 20:10:11,536  [INFO] MySql connect success
+2025-09-18 20:10:11,549  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:10:11,557  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:10:11,569  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:10:16,470  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:56624has connected.
+
+2025-09-18 20:10:18,657  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:10:18,719  [INFO] MySql connect success
+2025-09-18 20:10:18,727  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:10:18,727  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:10:18,727  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:10:20,112  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 20:10:20,181  [INFO] MySql connect success
+2025-09-18 20:10:20,181  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 20:10:20,191  [INFO] MySql readOperationQuery success, rows: 53, cols: 7
+2025-09-18 20:10:21,664  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 20:10:21,664  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:56624has closed.
+
+2025-09-18 20:39:56,576  [INFO] MySql connect success
+2025-09-18 20:39:56,586  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:39:56,595  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:39:56,606  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:40:09,180  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:55994has connected.
+
+2025-09-18 20:40:11,573  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:40:11,644  [INFO] MySql connect success
+2025-09-18 20:40:11,653  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:40:11,653  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:40:11,653  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:40:12,812  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 20:40:12,889  [INFO] MySql connect success
+2025-09-18 20:40:12,889  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 20:40:12,899  [INFO] MySql readOperationQuery success, rows: 54, cols: 7
+2025-09-18 20:40:13,880  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 20:43:17,221  [INFO] MySql connect success
+2025-09-18 20:43:17,232  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:43:17,239  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:43:17,252  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:43:24,200  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:34500has connected.
+
+2025-09-18 20:43:27,569  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:43:27,637  [INFO] MySql connect success
+2025-09-18 20:43:27,644  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:43:27,644  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:43:27,644  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:43:35,979  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 20:43:36,049  [INFO] MySql connect success
+2025-09-18 20:43:36,049  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 20:43:36,057  [INFO] MySql readOperationQuery success, rows: 55, cols: 7
+2025-09-18 20:43:36,920  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 20:44:58,594  [INFO] MySql connect success
+2025-09-18 20:44:58,606  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:44:58,613  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:44:58,625  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:45:04,494  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:59868has connected.
+
+2025-09-18 20:45:06,214  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:45:06,289  [INFO] MySql connect success
+2025-09-18 20:45:06,298  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:45:06,298  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:45:06,298  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:45:07,711  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 20:45:07,800  [INFO] MySql connect success
+2025-09-18 20:45:07,800  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 20:45:07,810  [INFO] MySql readOperationQuery success, rows: 56, cols: 7
+2025-09-18 20:45:08,906  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 20:45:19,413  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:59868has closed.
+
+2025-09-18 20:45:45,518  [INFO] MySql connect success
+2025-09-18 20:45:45,527  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:45:45,533  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:45:45,544  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:45:50,708  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:37582has connected.
+
+2025-09-18 20:45:53,184  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:45:53,252  [INFO] MySql connect success
+2025-09-18 20:45:53,257  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:45:53,257  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:45:53,257  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:45:54,304  [INFO] UserLoginSection2::process() : receive passwd : 转发AVPacket给Qt客户端,
+2025-09-18 20:45:54,383  [INFO] MySql connect success
+2025-09-18 20:45:54,383  [ERROR] UserLoginSection2::process() : passwd error : okk
+2025-09-18 20:46:03,793  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:38812has connected.
+
+2025-09-18 20:46:09,956  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:46:10,026  [INFO] MySql connect success
+2025-09-18 20:46:10,035  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:46:10,036  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:46:10,036  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:46:16,020  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 20:46:16,099  [INFO] MySql connect success
+2025-09-18 20:46:16,099  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 20:46:16,112  [INFO] MySql readOperationQuery success, rows: 57, cols: 7
+2025-09-18 20:46:16,981  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 20:46:23,405  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:38812has closed.
+
+2025-09-18 20:47:37,246  [INFO] MySql connect success
+2025-09-18 20:47:37,254  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:47:37,261  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:47:37,272  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 20:47:42,802  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:60528has connected.
+
+2025-09-18 20:47:46,742  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:47:46,822  [INFO] MySql connect success
+2025-09-18 20:47:46,828  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:47:46,828  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:47:46,828  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:47:48,302  [INFO] UserLoginSection2::process() : receive passwd : _conn
+2025-09-18 20:47:48,383  [INFO] MySql connect success
+2025-09-18 20:47:48,383  [ERROR] UserLoginSection2::process() : passwd error : okk
+2025-09-18 20:47:50,023  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:60528has closed.
+
+2025-09-18 20:47:51,129  [INFO] tcptcp 127.0.0.1:8000 --> 127.0.0.1:38020has connected.
+
+2025-09-18 20:47:52,931  [INFO] UserLoginSection1::process() : receive username : okk
+2025-09-18 20:47:53,009  [INFO] MySql connect success
+2025-09-18 20:47:53,016  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 20:47:53,016  [INFO] UserLoginSection1::process() : get okk setting : $1$e9AQ5987$
+2025-09-18 20:47:53,016  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-18 20:47:59,395  [INFO] UserLoginSection2::process() : receive passwd : $1$e9AQ5987$nnsggxh
+2025-09-18 20:47:59,476  [INFO] MySql connect success
+2025-09-18 20:47:59,477  [INFO] UserLoginSection2::process() : passwd correct : okk
+2025-09-18 20:47:59,483  [INFO] MySql readOperationQuery success, rows: 58, cols: 7
+2025-09-18 20:48:00,489  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-18 20:59:41,207  [INFO] MySql connect success
+2025-09-18 20:59:41,216  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 20:59:41,224  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 20:59:41,236  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 21:00:07,623  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:51274has connected.
+

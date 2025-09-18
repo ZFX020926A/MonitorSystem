@@ -183,35 +183,38 @@ int main(int argc, char const *argv[])
     // 初始化日志模块
     LogManger::Init(configMesg.getValue("log_file"));
 
-    string url = "rtsp://admin:admin@192.168.105.222/live/chn=0";
-    FFmpegVideo ffmpegvideo(url);
-    ffmpegvideo.openVideo();
-    ffmpegvideo.readFrame();
-    //ffmpegvideo.closeVideo();
 
-
-    // MySql myclient;
-    // myclient.connect("8.148.74.118", "root", "1234", "UserMesage", 3306);
+    MySql myclient;
+    myclient.connect("8.148.74.118", "root", "1234", "UserMesage", 3306);
     
     // 创建用户表
-    // string sql1 = "CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))"; 
-    // myclient.writeOperationQuery(sql1);
-
-    // server.start();
+    string sql1 = "CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))"; 
+    myclient.writeOperationQuery(sql1);
 
     // 创建设备表
-    // string sql2 = "CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))";
-    // myclient.writeOperationQuery(sql2);
+    string sql2 = "CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))";
+    myclient.writeOperationQuery(sql2);
+
 
     // rtsp字段后面会根据请求拼接上0/1，表示主码流或者副码流 两个频道
-    // string sql3 = "INSERT INTO deviceTable(id, type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, 1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=', '')";
-    // myclient.writeOperationQuery(sql3);
+    string sql3 = "INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')";
+    myclient.writeOperationQuery(sql3);
+
+    server.start();
 
     // string sql3 = "select * from user";
     // vector<vector<string>> res = myclient.readOperationQuery(sql3);
     // MySql::dump(res);
     // while (1)
     
+    // string url = "rtsp://admin:admin@192.168.105.222/live/chn=0";
+    // FFmpegVideo ffmpegvideo;
+    // ffmpegvideo.openVideo();
+    // ffmpegvideo.readFrame();        
+    //ffmpegvideo.closeVideo();
+
+
+
     
 	return 0;
 }

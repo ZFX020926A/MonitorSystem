@@ -1,6 +1,9 @@
 #ifndef __FFMPEGVIDEO_H__
 #define __FFMPEGVIDEO_H__
 
+#include "TcpConnection.hpp"
+#include "StructType.hpp"
+
 #include <string>
 using std::string;
 
@@ -17,46 +20,31 @@ extern "C"
 class FFmpegVideo
 {
 public:
-    FFmpegVideo(const string &url);
+    FFmpegVideo(TcpConnectionPtr conn, const Packet & p);
     ~FFmpegVideo();
 
+    void run();
     // 打开视频流
     bool openVideo();
-    // 关闭视频流
-    // void closeVideo();
+
     // 读取视频帧
     bool readFrame();
-    // // 转换成RGB32格式
-    // bool convertToRGB32();
-    // // 发送给Qt客户端
-    // bool sendToQtClient();
-
+    // 发送视频帧到Qt客户端
+    void sendToQtClient();
 private:
+
+    TcpConnectionPtr _conn;
+    Packet _packet;
+
     // 接收摄像头的URL 
     string _url;
     // 封装格式上下文 存储了视频的封装信息 
     AVFormatContext* _avFmCtx;
-    // 编解码上下文
-    AVCodecContext* _avCodecCtx;
-    // 编解码器结构体
-    AVCodec* _avCodec;
-    // 存储一帧解码后的数据
-    AVFrame* _avFrame;
-    // 存储一帧RGB帧数据
-    AVFrame* _avFrameRGB;
     // 存储一帧压缩数据
     AVPacket* _avPacket;
-    // 图像转换上下文
-    struct SwsContext* _imgConvertCtx;
-    // 输出缓冲区
-    uint8_t* _outBuffer;
     // 视频流索引
     int _videoStreamIndex;
 };
-
-
-
-
 
 
 #endif // !__FFMPEGVIDEO_HPP__
