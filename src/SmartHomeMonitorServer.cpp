@@ -46,12 +46,13 @@ void SmartHomeMonitorServer::onMessage(TcpConnectionPtr conn)
     Packet packet;//解析TLV格式之后的消息放在packet中
     int ret = conn->readPacket(packet);
     cout << "read:" << ret << "bytes.\n";
-    cout << "packet.type: " << packet.type << endl
-         << "packet.length:" << packet.length << endl
+    cout << "packet.type: " << ntohl(packet.type) << endl
+         << "packet.length:" << ntohl(packet.length) << endl
          << "pakcet.msg:" << packet.msg << endl;
 
     
-    switch(packet.type)
+    //switch(packet.type)
+    switch(ntohl(packet.type))
     {
     case TASK_TYPE_LOGIN_SECTION1:
         {

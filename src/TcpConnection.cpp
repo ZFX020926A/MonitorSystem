@@ -50,11 +50,27 @@ void TcpConnection::sendInLoop(const string & msg)
     }
 }
 
-void TcpConnection::sendInLoop(const TLV & data)
+void TcpConnection::sendInLoop(const TLV & tlv)
 {
-    int tlvlen = 8 + data.length;//8字节的TLV头 + 内容长度
+    int tlvlen = 8 + tlv.length;//8字节的TLV头 + 内容长度
+	// TLV temp;
+	// temp.length = htonl(tlv.length);
+	// temp.type = htonl(tlv.type);
+
+	int len = htonl(tlv.length);
+	int ty = htonl(tlv.type);
+	// memcpy(temp.data, tlv.data, tlv.length);
     string msg;
-    msg.assign((const char*)&data, tlvlen);//再拷贝内容
+
+    // msg.assign((const char*)&temp, tlvlen);//再拷贝内容
+	// msg.append((const char*)&temp, 8);
+	// msg.append(tlv.data, tlv.length);
+
+	msg.append(reinterpret_cast<const char*>(&ty), sizeof(ty));
+	msg.append(reinterpret_cast<const char*>(&len), sizeof(len));
+	msg.append(tlv.data, tlv.length);
+
+
     sendInLoop(msg);    
 }
 

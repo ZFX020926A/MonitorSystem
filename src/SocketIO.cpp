@@ -14,16 +14,23 @@ int SocketIO::readPacket(Packet & packet)
     //当legnth为0时，表示没有value
     //type+length 可以认为是packet的header头部
     //value 是packet的body消息体
-    int type, length;
-    readn((char*)&type, sizeof(type));
-    readn((char*)&length, sizeof(length));
+    int typea, lengtha;
+    readn((char*)&typea, sizeof(typea));
+    readn((char*)&lengtha, sizeof(lengtha));
+	int type = ntohl(typea);
+	int length = ntohl(lengtha);
     if(length > 0) {
         char * pbuf = new char[length + 1]();
         int ret = readn(pbuf, length);//要确保读取length个字节的数据,不能仅仅只是使用recv
 		
-		packet.type = type;
-		packet.length = length;
+		// packet.type = type;
+		// packet.length = length;
+		// packet.msg.assign(pbuf, length);//复制length个字节的数据，保存到string中
+
+		packet.type = ntohl(type);
+		packet.length = ntohl(length);
 		packet.msg.assign(pbuf, length);//复制length个字节的数据，保存到string中
+
 		
 		delete [] pbuf;//切记不要忘了释放
         return ret + 8;

@@ -16,7 +16,8 @@ void UserLoginSection1::process()
 {
     cout << "UserLoginSection1::process()" << endl;
 
-    if( _packet.type == TASK_TYPE_LOGIN_SECTION1 || _packet.type == TASK_TYPE_REGISTER1) 
+    // if( _packet.type == TASK_TYPE_LOGIN_SECTION1 || _packet.type == TASK_TYPE_REGISTER1) 
+    if( ntohl(_packet.type) == TASK_TYPE_LOGIN_SECTION1 || ntohl(_packet.type) == TASK_TYPE_REGISTER1) 
     {
         // 解包获取用户名
         string username;
@@ -30,6 +31,7 @@ void UserLoginSection1::process()
             // 连接数据库失败
             // 告知对端有问题
             TLV tlv;
+            //tlv.type = TASK_TYPE_LOGIN_SECTION1_RESP_ERROR;
             tlv.type = TASK_TYPE_LOGIN_SECTION1_RESP_ERROR;
             tlv.length = 0; // 不需要发送消息体了
             _conn->sendInLoop(tlv);
@@ -44,20 +46,23 @@ void UserLoginSection1::process()
 
         if(res.size() == 0)
         {
-            if(_packet.type == TASK_TYPE_LOGIN_SECTION1)
+            //if(_packet.type == TASK_TYPE_LOGIN_SECTION1)
+            if(ntohl(_packet.type) == TASK_TYPE_LOGIN_SECTION1)
             {
                 // 用户登录
                 // 里面没有用户
                 LogManger::getInstance().error("UserLoginSection1::process() : login failed, not in user : " + username);
                 // 告知对端有问题
                 TLV tlv;
+                // tlv.type = TASK_TYPE_LOGIN_SECTION1_RESP_ERROR;
                 tlv.type = TASK_TYPE_LOGIN_SECTION1_RESP_ERROR;
                 tlv.length = 0; // 不需要发送消息体了
                 _conn->sendInLoop(tlv);
                 cout << tlv.type << " : " << tlv.length << " : " << tlv.data << endl;
                 return ;
             }
-            else if(_packet.type == TASK_TYPE_REGISTER1)
+            //else if(_packet.type == TASK_TYPE_REGISTER1)
+            else if(ntohl(_packet.type) == TASK_TYPE_REGISTER1)
             {
                 // 没有该用户
                 // 构造salt发送给对端
@@ -79,7 +84,8 @@ void UserLoginSection1::process()
                 // 查询刚插入的用户ID
                 string sql3 = "SELECT id FROM user WHERE name = '" + username + "'";
                 vector<vector<string>> res2 = myclient.readOperationQuery(sql3);
-                if(res2.size() != 0)
+                // if(res2.size() != 0)
+                if(res2.size() > 1)
                 {
                     int id = std::stoi(res2[1][0]);
                     UserManger::getInstance().addUser(id, user);
@@ -88,16 +94,20 @@ void UserLoginSection1::process()
 
                 // 构造TLV 发送给对端（成功）
                 TLV tlv;
+                //tlv.type = TASK_TYPE_REGISTER1_RESP_OK;
                 tlv.type = TASK_TYPE_REGISTER1_RESP_OK;
+                // int len = setting.length();
+                cout << "setting length : " << setting.length() << endl;
                 tlv.length = setting.length();
-                strncpy(tlv.data, setting.c_str(), tlv.length);
+                strncpy(tlv.data, setting.c_str(), setting.length());
                 _conn->sendInLoop(tlv);
             }
         }
 
         if(res.size() != 0)
         {
-            if(_packet.type == TASK_TYPE_LOGIN_SECTION1)
+            //if(_packet.type == TASK_TYPE_LOGIN_SECTION1)
+            if(ntohl(_packet.type) == TASK_TYPE_LOGIN_SECTION1)
             {
                 // 有该用户
                 // 获取该用户的setting字段
@@ -127,6 +137,8 @@ void UserLoginSection1::process()
                 
                 // 构造TLV 发送给对端（成功）
                 TLV tlv;
+                // tlv.type = TASK_TYPE_LOGIN_SECTION1_RESP_OK;
+                // tlv.length = setting.length();
                 tlv.type = TASK_TYPE_LOGIN_SECTION1_RESP_OK;
                 tlv.length = setting.length();
                 strncpy(tlv.data, setting.c_str(), tlv.length);
@@ -136,12 +148,14 @@ void UserLoginSection1::process()
                 cout << "UserLoginSection1::process() : send setting to client" << endl;
                 return ;
             }
-            else if(_packet.type == TASK_TYPE_REGISTER1)
+            // else if(_packet.type == TASK_TYPE_REGISTER1)
+            else if(ntohl(_packet.type == TASK_TYPE_REGISTER1))
             {
                 // 里面有该用户
                 LogManger::getInstance().error("UserLoginSection1::process() : " + username + " user already exists  ");
                 // 告知对端有问题
                 TLV tlv;
+                // tlv.type = TASK_TYPE_REGISTER1_RESP_ERROR;
                 tlv.type = TASK_TYPE_REGISTER1_RESP_ERROR;
                 tlv.length = 0; // 不需要发送消息体了
                 _conn->sendInLoop(tlv);
@@ -173,6 +187,7 @@ void UserLoginSection2::process()
         // 连接数据库失败
         // 告知对端有问题
         TLV tlv;
+        // tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_ERROR;
         tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_ERROR;
         tlv.length = 0; // 不需要发送消息体了
         _conn->sendInLoop(tlv);
@@ -181,7 +196,8 @@ void UserLoginSection2::process()
         return ;
     }
 
-    if( _packet.type == TASK_TYPE_LOGIN_SECTION2)
+    // if( _packet.type == TASK_TYPE_LOGIN_SECTION2)
+    if( ntohl(_packet.type) == TASK_TYPE_LOGIN_SECTION2)
     {
         string _userMangerPassWord;
         // 根据连接指针TcpConnectionPtr 来确定是哪一个对象 再对比其中存储的密码
@@ -209,6 +225,7 @@ void UserLoginSection2::process()
             LogManger::getInstance().error("UserLoginSection2::process() : passwd error : " + user->_name);
             // 告知对端有问题
             TLV tlv;
+            //tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_ERROR;
             tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_ERROR;
             tlv.length = 0; // 不需要发送消息体了
             _conn->sendInLoop(tlv);
@@ -231,6 +248,8 @@ void UserLoginSection2::process()
         string channels = deviceres[1][3];
         
         TLV tlv;
+        // tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_OK;
+        // tlv.length = channels.length(); // 不需要发送消息体了
         tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_OK;
         tlv.length = channels.length(); // 不需要发送消息体了
         strcpy(tlv.data, channels.c_str());
@@ -273,6 +292,7 @@ void UserLoginSection2::process()
         // 注册成功
         LogManger::getInstance().info("UserLoginSection2::process() : register success : " + _packet.msg);
         TLV tlv;
+        // tlv.type = TASK_TYPE_REGISTER2_RESP_OK;
         tlv.type = TASK_TYPE_REGISTER2_RESP_OK;
         tlv.length = 0; // 不需要发送消息体了
         _conn->sendInLoop(tlv);

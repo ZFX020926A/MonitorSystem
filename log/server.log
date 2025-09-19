@@ -617,3 +617,120 @@
 2025-09-18 20:59:41,236  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
 2025-09-18 21:00:07,623  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:51274has connected.
 
+2025-09-18 21:53:25,587  [INFO] MySql connect success
+2025-09-18 21:53:25,600  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 21:53:25,608  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 21:53:25,619  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 21:54:35,254  [INFO] MySql connect success
+2025-09-18 21:54:35,264  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 21:54:35,272  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 21:54:35,286  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 21:54:59,994  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:52878has connected.
+
+2025-09-18 21:54:59,994  [INFO] UserLoginSection1::process() : receive username : mayuehua
+2025-09-18 21:55:00,083  [INFO] MySql connect success
+2025-09-18 21:55:00,087  [INFO] MySql readOperationQuery success, but no data  
+2025-09-18 21:55:00,087  [INFO] UserLoginSection1::process() : mayuehua register successful and generate setting : $1$hWXOC2KT$
+2025-09-18 21:55:00,096  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('mayuehua', '$1$hWXOC2KT$')
+2025-09-18 21:55:00,100  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-18 21:55:00,100  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 4
+2025-09-18 22:07:44,924  [INFO] MySql connect success
+2025-09-18 22:07:44,932  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 22:07:44,940  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 22:07:44,952  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 22:07:52,220  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:54699has connected.
+
+2025-09-18 22:07:52,221  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-18 22:07:52,296  [INFO] MySql connect success
+2025-09-18 22:07:52,303  [INFO] MySql readOperationQuery success, but no data  
+2025-09-18 22:07:52,303  [INFO] UserLoginSection1::process() : myh register successful and generate setting : $1$1a5Fg2oe$
+2025-09-18 22:07:52,315  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('myh', '$1$1a5Fg2oe$')
+2025-09-18 22:07:52,323  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-18 22:07:52,325  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 5
+2025-09-18 22:22:07,062  [INFO] MySql connect success
+2025-09-18 22:22:07,069  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 22:22:07,076  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 22:22:07,087  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 22:22:32,005  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:55956has connected.
+
+2025-09-18 22:22:32,010  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-18 22:22:32,087  [INFO] MySql connect success
+2025-09-18 22:22:32,094  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 22:23:09,907  [INFO] MySql connect success
+2025-09-18 22:23:09,915  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 22:23:09,922  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 22:23:09,935  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 22:23:13,893  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:56288has connected.
+
+2025-09-18 22:23:13,893  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-18 22:23:13,993  [INFO] MySql connect success
+2025-09-18 22:23:13,998  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 22:25:01,973  [INFO] MySql connect success
+2025-09-18 22:25:01,981  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 22:25:01,987  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 22:25:01,999  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 22:25:06,399  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:56550has connected.
+
+2025-09-18 22:25:06,400  [INFO] UserLoginSection1::process() : receive username : ooo
+2025-09-18 22:25:06,478  [INFO] MySql connect success
+2025-09-18 22:25:06,483  [INFO] MySql readOperationQuery success, but no data  
+2025-09-18 22:25:06,483  [INFO] UserLoginSection1::process() : ooo register successful and generate setting : $1$7zuPiQJK$
+2025-09-18 22:25:06,496  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('ooo', '$1$7zuPiQJK$')
+2025-09-18 22:25:06,501  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-18 22:25:06,501  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 6
+2025-09-18 22:29:18,898  [INFO] MySql connect success
+2025-09-18 22:29:18,907  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 22:29:18,914  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 22:29:18,924  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 22:29:33,492  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:56910has connected.
+
+2025-09-18 22:29:33,494  [INFO] UserLoginSection1::process() : receive username : ddddd
+2025-09-18 22:29:33,567  [INFO] MySql connect success
+2025-09-18 22:29:33,573  [INFO] MySql readOperationQuery success, but no data  
+2025-09-18 22:29:33,573  [INFO] UserLoginSection1::process() : ddddd register successful and generate setting : $1$75P8Qdv5$
+2025-09-18 22:29:33,585  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('ddddd', '$1$75P8Qdv5$')
+2025-09-18 22:29:33,590  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-18 22:29:33,591  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 7
+2025-09-18 22:30:35,405  [INFO] MySql connect success
+2025-09-18 22:30:35,413  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 22:30:35,421  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 22:30:35,436  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 22:30:42,652  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:56994has connected.
+
+2025-09-18 22:30:42,652  [INFO] UserLoginSection1::process() : receive username : ddddd
+2025-09-18 22:30:42,729  [INFO] MySql connect success
+2025-09-18 22:30:42,734  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 22:30:51,712  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:56994has closed.
+
+2025-09-18 22:31:08,189  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:57021has connected.
+
+2025-09-18 22:31:08,190  [INFO] UserLoginSection1::process() : receive username : rrrr
+2025-09-18 22:31:08,259  [INFO] MySql connect success
+2025-09-18 22:31:08,270  [INFO] MySql readOperationQuery success, but no data  
+2025-09-18 22:31:08,270  [INFO] UserLoginSection1::process() : rrrr register successful and generate setting : $1$zvacBRN1$
+2025-09-18 22:31:08,281  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('rrrr', '$1$zvacBRN1$')
+2025-09-18 22:31:08,286  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-18 22:31:08,286  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 8
+2025-09-18 22:31:08,289  [INFO] UserLoginSection2::process() : receive passwd : $1$zvacBRN1$0a113ef6b61820daa5611c870ed8d5ee
+2025-09-18 22:31:08,382  [INFO] MySql connect success
+2025-09-18 22:31:08,389  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 22:31:08,403  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$zvacBRN1$0a113ef6b61820daa5611c870ed8d5ee' WHERE name = 'rrrr'
+2025-09-18 22:31:08,403  [INFO] UserLoginSection2::process() : register success : $1$zvacBRN1$0a113ef6b61820daa5611c870ed8d5ee
+2025-09-18 22:36:26,660  [INFO] MySql connect success
+2025-09-18 22:36:26,671  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))
+2025-09-18 22:36:26,679  [INFO] MySql writeOperationQuery success ： CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))
+2025-09-18 22:36:26,691  [INFO] MySql writeOperationQuery success ： INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')
+2025-09-18 22:36:40,049  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:57371has connected.
+
+2025-09-18 22:36:40,050  [INFO] UserLoginSection1::process() : receive username : iiii
+2025-09-18 22:36:40,119  [INFO] MySql connect success
+2025-09-18 22:36:40,124  [INFO] MySql readOperationQuery success, but no data  
+2025-09-18 22:36:40,124  [INFO] UserLoginSection1::process() : iiii register successful and generate setting : $1$VnONA69x$
+2025-09-18 22:36:40,135  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('iiii', '$1$VnONA69x$')
+2025-09-18 22:36:40,140  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-18 22:36:40,140  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 9
+2025-09-18 22:36:40,142  [INFO] UserLoginSection2::process() : receive passwd : $1$VnONA69x$0a113ef6b61820daa5611c870ed8d5ee
+2025-09-18 22:36:40,212  [INFO] MySql connect success
+2025-09-18 22:36:40,218  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-18 22:36:40,231  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$VnONA69x$0a113ef6b61820daa5611c870ed8d5ee' WHERE name = 'iiii'
+2025-09-18 22:36:40,231  [INFO] UserLoginSection2::process() : register success : $1$VnONA69x$0a113ef6b61820daa5611c870ed8d5ee
