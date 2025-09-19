@@ -184,22 +184,22 @@ int main(int argc, char const *argv[])
     LogManger::Init(configMesg.getValue("log_file"));
 
 
-    MySql myclient;
-    myclient.connect("8.148.74.118", "root", "1234", "UserMesage", 3306);
+    // MySql myclient;
+    // myclient.connect("8.148.74.118", "root", "1234", "UserMesage", 3306);
     
-    // 创建用户表
-    string sql1 = "CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))"; 
-    myclient.writeOperationQuery(sql1);
+    // // 创建用户表
+    // string sql1 = "CREATE TABLE IF NOT EXISTS user(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20), setting CHAR(64), encrypt CHAR(128))"; 
+    // myclient.writeOperationQuery(sql1);
 
-    // 创建设备表
-    string sql2 = "CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))";
-    myclient.writeOperationQuery(sql2);
+    // // 创建设备表
+    // string sql2 = "CREATE TABLE IF NOT EXISTS deviceTable(id INT PRIMARY KEY AUTO_INCREMENT, type INT, serial_no CHAR(128), channels INT, ip CHAR(24), rtsp CHAR(128), rtmp CHAR(128))";
+    // myclient.writeOperationQuery(sql2);
 
 
     // rtsp字段后面会根据请求拼接上0/1，表示主码流或者副码流 两个频道
-    string sql3 = "INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', '')";
-    myclient.writeOperationQuery(sql3);
-
+    // string sql3 = "INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(1, '09aaa54c30d06875d926a874617c06a5', 2, '192.168.105.222', 'rtsp://admin:admin@192.168.105.222/live/chn=0', 'rtmp://192.168.105.222:1935/hlsram/live0')";
+    // myclient.writeOperationQuery(sql3);
+    // INSERT INTO deviceTable(type, serial_no, channels, ip, rtsp, rtmp) VALUES(0, 'f6fdffe48c908deb0f4c3bd36c032e72', 2, '192.168.105.100', 'rtsp://admin:admin@192.168.105.100/live/chn=0', 'rtmp://192.168.105.100:1935/hlsram/live0')
     server.start();
 
     // string sql3 = "select * from user";
@@ -213,9 +213,6 @@ int main(int argc, char const *argv[])
     // ffmpegvideo.readFrame();        
     //ffmpegvideo.closeVideo();
 
-
-
-    
 	return 0;
 }
 

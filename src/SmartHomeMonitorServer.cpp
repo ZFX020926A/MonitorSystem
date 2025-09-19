@@ -86,6 +86,7 @@ void SmartHomeMonitorServer::onMessage(TcpConnectionPtr conn)
         break;
     case TASK_TYPE_GET_VIDEO_STREAM: // 处理获取视频流
         {
+            cout << "Received TASK_TYPE_GET_VIDEO_STREAM request." << endl;
             auto ffmpegvideo = std::make_shared<FFmpegVideo>(conn, packet);
             _threadpool.addTask([ffmpegvideo]() { 
                 ffmpegvideo->run(); 
@@ -94,7 +95,6 @@ void SmartHomeMonitorServer::onMessage(TcpConnectionPtr conn)
         break;
     }
 }
-
 
 void SmartHomeMonitorServer::onClose(TcpConnectionPtr conn)
 {

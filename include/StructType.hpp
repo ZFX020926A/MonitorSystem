@@ -49,7 +49,7 @@ enum TaskType
     TASK_TYPE_REGISTER1_RESP_ERROR,
     TASK_TYPE_REGISTER2,     // 注册第二阶段
     TASK_TYPE_REGISTER2_RESP_OK,
-    TASK_TYPE_CAMERA_PTZ_CONTROL, // 对摄像头的控制
+    TASK_TYPE_CAMERA_PTZ_CONTROL, // 对摄像头的控制 12
     TASK_TYPE_GET_VIDEO_STREAM,  // 获取视频流
     TASK_TYPE_GET_VIDEO_STREAM_RESP_OK,
     TASK_TYPE_GET_VIDEO_STREAM_RESP_ERROR
@@ -80,5 +80,13 @@ struct User
     vector<Camera> _cameras;
 };
 
+struct VideoFrame
+{
+    int cameraId; // 摄像头ID
+    uint32_t size;
+    int64_t pts; // 时间戳
+    int64_t dts; // 解码时间戳
+    uint8_t *data; // 视频数据 指向AVPacket的data
+};
 
 #endif // !__STRUCTTYPE_H__

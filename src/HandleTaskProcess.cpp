@@ -217,8 +217,6 @@ void UserLoginSection2::process()
         cout << "<< << _userMangerPassWord:" << _userMangerPassWord << endl;
         
         
-        
-        
         if(passwd != _userMangerPassWord)
         {
             // 密码不正确
@@ -251,8 +249,9 @@ void UserLoginSection2::process()
         // tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_OK;
         // tlv.length = channels.length(); // 不需要发送消息体了
         tlv.type = TASK_TYPE_LOGIN_SECTION2_RESP_OK;
-        tlv.length = channels.length(); // 不需要发送消息体了
-        strcpy(tlv.data, channels.c_str());
+        // tlv.length = channels.length(); // 不需要发送消息体了
+        // strcpy(tlv.data, channels.c_str());
+        tlv.length = 0; // 不需要发送消息体了
         // 发送通道数给客户端
         _conn->sendInLoop(tlv);
         cout << tlv.type << " : " << tlv.length << " : " << tlv.data << endl;

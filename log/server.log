@@ -734,3 +734,221 @@
 2025-09-18 22:36:40,218  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
 2025-09-18 22:36:40,231  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$VnONA69x$0a113ef6b61820daa5611c870ed8d5ee' WHERE name = 'iiii'
 2025-09-18 22:36:40,231  [INFO] UserLoginSection2::process() : register success : $1$VnONA69x$0a113ef6b61820daa5611c870ed8d5ee
+2025-09-19 10:07:27,255  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:59765has connected.
+
+2025-09-19 10:07:27,257  [INFO] UserLoginSection1::process() : receive username : rrrr
+2025-09-19 10:07:27,358  [INFO] MySql connect success
+2025-09-19 10:07:27,367  [INFO] MySql readOperationQuery success, but no data  
+2025-09-19 10:07:27,367  [INFO] UserLoginSection1::process() : rrrr register successful and generate setting : $1$eW8z5o9k$
+2025-09-19 10:07:27,382  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('rrrr', '$1$eW8z5o9k$')
+2025-09-19 10:07:27,389  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-19 10:07:27,389  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 1
+2025-09-19 10:07:27,393  [INFO] UserLoginSection2::process() : receive passwd : $1$eW8z5o9k$250cf8b51c773f3f8dc8b4be867a9a02
+2025-09-19 10:07:27,472  [INFO] MySql connect success
+2025-09-19 10:07:27,480  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 10:07:27,493  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$eW8z5o9k$250cf8b51c773f3f8dc8b4be867a9a02' WHERE name = 'rrrr'
+2025-09-19 10:07:27,493  [INFO] UserLoginSection2::process() : register success : $1$eW8z5o9k$250cf8b51c773f3f8dc8b4be867a9a02
+2025-09-19 10:07:31,292  [INFO] UserLoginSection1::process() : receive username : rrrr
+2025-09-19 10:07:31,377  [INFO] MySql connect success
+2025-09-19 10:07:31,384  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 10:07:31,384  [INFO] UserLoginSection1::process() : get rrrr setting : $1$eW8z5o9k$
+2025-09-19 10:07:31,384  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 1
+2025-09-19 10:07:31,387  [INFO] UserLoginSection2::process() : receive passwd : $1$eW8z5o9k$250cf8b51c773f3f8dc8b4be867a9a02
+2025-09-19 10:07:31,524  [INFO] MySql connect success
+2025-09-19 10:07:31,524  [INFO] UserLoginSection2::process() : passwd correct : rrrr
+2025-09-19 10:07:31,530  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 10:55:31,126  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:62997has connected.
+
+2025-09-19 10:55:31,128  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 10:55:31,242  [INFO] MySql connect success
+2025-09-19 10:55:31,248  [INFO] MySql readOperationQuery success, but no data  
+2025-09-19 10:55:31,248  [ERROR] UserLoginSection1::process() : login failed, not in user : myh
+2025-09-19 10:55:33,188  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 10:55:33,293  [INFO] MySql connect success
+2025-09-19 10:55:33,300  [INFO] MySql readOperationQuery success, but no data  
+2025-09-19 10:55:33,300  [INFO] UserLoginSection1::process() : myh register successful and generate setting : $1$EgGeTG6G$
+2025-09-19 10:55:33,310  [INFO] MySql writeOperationQuery success ： INSERT INTO user (name, setting) VALUES ('myh', '$1$EgGeTG6G$')
+2025-09-19 10:55:33,316  [INFO] MySql readOperationQuery success, rows: 1, cols: 1
+2025-09-19 10:55:33,316  [INFO] UserLoginSection1::process() : add new user to UserManger with id : 2
+2025-09-19 10:55:33,320  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 10:55:33,386  [INFO] MySql connect success
+2025-09-19 10:55:33,393  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 10:55:33,405  [INFO] MySql writeOperationQuery success ： UPDATE user SET encrypt = '$1$EgGeTG6G$202cb962ac59075b964b07152d234b70' WHERE name = 'myh'
+2025-09-19 10:55:33,405  [INFO] UserLoginSection2::process() : register success : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 10:55:34,820  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 10:55:34,936  [INFO] MySql connect success
+2025-09-19 10:55:34,942  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 10:55:34,942  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 10:55:34,942  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 10:55:34,944  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 10:55:35,058  [INFO] MySql connect success
+2025-09-19 10:55:35,058  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 10:55:35,066  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 10:55:40,422  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 10:55:40,531  [INFO] MySql connect success
+2025-09-19 10:55:40,537  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 10:55:40,537  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 10:55:40,537  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 10:55:40,545  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 10:55:40,650  [INFO] MySql connect success
+2025-09-19 10:55:40,650  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 10:55:40,655  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 10:56:36,633  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:63074has connected.
+
+2025-09-19 10:56:36,637  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 10:56:36,749  [INFO] MySql connect success
+2025-09-19 10:56:36,753  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 10:56:43,469  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 10:56:43,549  [INFO] MySql connect success
+2025-09-19 10:56:43,556  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 10:56:43,556  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 10:56:43,556  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 10:56:43,560  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 10:56:43,643  [INFO] MySql connect success
+2025-09-19 10:56:43,643  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 10:56:43,651  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 11:01:10,559  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:63376has connected.
+
+2025-09-19 11:01:10,560  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 11:01:10,676  [INFO] MySql connect success
+2025-09-19 11:01:10,682  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 11:01:32,975  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 11:01:33,052  [INFO] MySql connect success
+2025-09-19 11:01:33,056  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 11:01:33,056  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 11:01:33,056  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 11:01:33,058  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 11:01:33,123  [INFO] MySql connect success
+2025-09-19 11:01:33,123  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 11:01:33,129  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 11:11:42,257  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.171:59634has connected.
+
+2025-09-19 11:27:24,016  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:64655has connected.
+
+2025-09-19 11:27:24,016  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 11:27:24,100  [INFO] MySql connect success
+2025-09-19 11:27:24,107  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 11:27:24,107  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 11:27:24,107  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 11:27:24,109  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 11:27:24,173  [INFO] MySql connect success
+2025-09-19 11:27:24,173  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 11:27:24,178  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 11:32:08,615  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:64862has connected.
+
+2025-09-19 11:32:08,615  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 11:32:08,686  [INFO] MySql connect success
+2025-09-19 11:32:08,692  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 11:32:08,692  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 11:32:08,692  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 11:32:08,694  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 11:32:08,770  [INFO] MySql connect success
+2025-09-19 11:32:08,770  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 11:32:08,777  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 11:37:41,804  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:65100has connected.
+
+2025-09-19 11:37:41,807  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 11:37:41,883  [INFO] MySql connect success
+2025-09-19 11:37:41,889  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 11:37:41,889  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 11:37:41,889  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 11:37:41,892  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 11:37:41,962  [INFO] MySql connect success
+2025-09-19 11:37:41,963  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 11:37:41,969  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 11:44:32,796  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:65379has connected.
+
+2025-09-19 11:44:32,797  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 11:44:32,870  [INFO] MySql connect success
+2025-09-19 11:44:32,876  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 11:44:32,876  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 11:44:32,876  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 11:44:32,879  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 11:44:32,935  [INFO] MySql connect success
+2025-09-19 11:44:32,936  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 11:44:32,943  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 11:46:38,841  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:65484has connected.
+
+2025-09-19 11:46:38,843  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 11:46:38,927  [INFO] MySql connect success
+2025-09-19 11:46:38,934  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 11:46:38,934  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 11:46:38,934  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 11:46:38,936  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 11:46:39,003  [INFO] MySql connect success
+2025-09-19 11:46:39,003  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 11:46:39,010  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 12:44:43,977  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:51450has connected.
+
+2025-09-19 12:44:43,979  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 12:44:44,089  [INFO] MySql connect success
+2025-09-19 12:44:44,094  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 12:44:44,094  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 12:44:44,094  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 12:44:44,098  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 12:44:44,164  [INFO] MySql connect success
+2025-09-19 12:44:44,164  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 12:44:44,172  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 13:04:27,401  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:52482has connected.
+
+2025-09-19 13:04:27,403  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 13:04:27,468  [INFO] MySql connect success
+2025-09-19 13:04:27,472  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 13:04:27,472  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 13:04:27,472  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 13:04:27,476  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 13:04:27,540  [INFO] MySql connect success
+2025-09-19 13:04:27,540  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 13:04:27,546  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 14:03:31,458  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:55413has connected.
+
+2025-09-19 14:03:31,461  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 14:03:31,528  [INFO] MySql connect success
+2025-09-19 14:03:31,534  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 14:03:31,534  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 14:03:31,534  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 14:03:31,539  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 14:03:31,620  [INFO] MySql connect success
+2025-09-19 14:03:31,620  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 14:03:31,626  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 14:04:28,595  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:55413has closed.
+
+2025-09-19 14:04:40,728  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:55477has connected.
+
+2025-09-19 14:04:40,729  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 14:04:40,796  [INFO] MySql connect success
+2025-09-19 14:04:40,806  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 14:04:40,806  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 14:04:40,806  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 14:04:40,809  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 14:04:40,868  [INFO] MySql connect success
+2025-09-19 14:04:40,868  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 14:04:40,877  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 14:04:52,357  [INFO] FFmpegVideo::openVideo() : open video stream success for url: rtmp://192.168.105.222:1935/hlsram/live0
+2025-09-19 14:04:52,357  [INFO] FFmpegVideo::sendToQtClient() : sending video frame to Qt client 
+2025-09-19 14:04:57,374  [INFO] FFmpegVideo::sendToQtClient() : sending video frame to Qt client 
+2025-09-19 14:05:02,375  [INFO] FFmpegVideo::sendToQtClient() : sending video frame to Qt client 
+2025-09-19 14:05:07,376  [INFO] FFmpegVideo::sendToQtClient() : sending video frame to Qt client 
+2025-09-19 14:05:12,377  [INFO] FFmpegVideo::sendToQtClient() : sending video frame to Qt client 
+2025-09-19 14:28:18,720  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:56415has connected.
+
+2025-09-19 14:28:18,724  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 14:28:18,794  [INFO] MySql connect success
+2025-09-19 14:28:18,801  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 14:28:18,802  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 14:28:18,802  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 14:28:18,806  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 14:28:18,872  [INFO] MySql connect success
+2025-09-19 14:28:18,872  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 14:28:18,883  [INFO] MySql readOperationQuery success, rows: 2, cols: 7
+2025-09-19 14:45:35,892  [INFO] tcptcp 192.168.105.238:8000 --> 192.168.105.115:57257has connected.
+
+2025-09-19 14:45:35,897  [INFO] UserLoginSection1::process() : receive username : myh
+2025-09-19 14:45:35,972  [INFO] MySql connect success
+2025-09-19 14:45:35,981  [INFO] MySql readOperationQuery success, rows: 1, cols: 4
+2025-09-19 14:45:35,981  [INFO] UserLoginSection1::process() : get myh setting : $1$EgGeTG6G$
+2025-09-19 14:45:35,981  [INFO] UserLoginSection1::process() : add already existing user to UserManger with id : 2
+2025-09-19 14:45:35,985  [INFO] UserLoginSection2::process() : receive passwd : $1$EgGeTG6G$202cb962ac59075b964b07152d234b70
+2025-09-19 14:45:36,048  [INFO] MySql connect success
+2025-09-19 14:45:36,048  [INFO] UserLoginSection2::process() : passwd correct : myh
+2025-09-19 14:45:36,056  [INFO] MySql readOperationQuery success, rows: 2, cols: 7

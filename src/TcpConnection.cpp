@@ -57,8 +57,9 @@ void TcpConnection::sendInLoop(const TLV & tlv)
 	// temp.length = htonl(tlv.length);
 	// temp.type = htonl(tlv.type);
 
-	int len = htonl(tlv.length);
 	int ty = htonl(tlv.type);
+	int len = htonl(tlv.length);
+	
 	// memcpy(temp.data, tlv.data, tlv.length);
     string msg;
 

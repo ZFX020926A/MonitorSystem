@@ -6,9 +6,14 @@
 #include "TcpConnection.hpp" 
 
 #include <iostream>
-#include <unistd.h> // for sleep
+#include <unistd.h> 
+#include <cstring>
+
+#include <iomanip>
+
 using std::cout;
 using std::endl;
+using std::hex;
 
 
 FFmpegVideo::FFmpegVideo(TcpConnectionPtr conn, const Packet & p)
@@ -21,7 +26,6 @@ FFmpegVideo::FFmpegVideo(TcpConnectionPtr conn, const Packet & p)
     // 初始化ffmpeg网络模块
     avformat_network_init();
     _avPacket = av_packet_alloc();
-    
 }
 
 FFmpegVideo::~FFmpegVideo()
@@ -136,7 +140,7 @@ bool FFmpegVideo::readFrame()
         }
         
         // 直接转发avPacket给Qt客户端
-        //sendToQtClient();
+        sendToQtClient(*_avPacket);
 
         // 打印详细信息
         
@@ -158,51 +162,54 @@ void FFmpegVideo::run() {
 }
 
     // 发送视频帧到Qt客户端
-void FFmpegVideo::sendToQtClient()
+void FFmpegVideo::sendToQtClient(AVPacket &_avPacket)
 {
     if (_conn || !_conn->isClosed()) 
     {
     // 记录日志，避免写入
         cout << "sendToQtClient: _conn is valid, sending packet." << endl;
-    // TLV tlv;
-    // tlv.type = TASK_TYPE_GET_VIDEO_STREAM_RESP_OK;
-    // int maxDataLen = 1024;
-    // int dataLen = _avPacket->size > maxDataLen ? maxDataLen : _avPacket->size;
+        LogManger::getInstance().info("FFmpegVideo::sendToQtClient() : sending video frame to Qt client ");
+        // 序列化数据 avpacket数据中数据拿取到
+        VideoFrame vf;
+        // vf.cameraId =
+        vf.size = _avPacket.size;
+        vf.pts = _avPacket.pts;
+        vf.dts = _avPacket.dts;
+        vf.data = _avPacket.data;
+        cout << "sendToQtClient: vf.size = " << vf.size << ", pts = " << vf.pts << ", dts = " << vf.dts << endl;
+        // 序列化开始
+        vector<char> frameData;
+        // 摄像头 头部id
+        //frameData.insert(frameData.end(), reinterpret_cast<char*>(&vf.cameraId), reinterpret_cast<char*>(&vf.cameraId) + sizeof(vf.cameraId));
+        uint32_t netSize = vf.size;
+        frameData.insert(frameData.end(), reinterpret_cast<char*>(&netSize), reinterpret_cast<char*>(&netSize) + sizeof(netSize));
+        int64_t netPts = vf.pts;
+        frameData.insert(frameData.end(), reinterpret_cast<char*>(&netPts), reinterpret_cast<char*>(&netPts) + sizeof(netPts));
+        int64_t netDts = vf.dts;
+        frameData.insert(frameData.end(), reinterpret_cast<char*>(&netDts), reinterpret_cast<char*>(&netDts) + sizeof(netDts));
+        // 视频数据
+        frameData.insert(frameData.end(), reinterpret_cast<char*>(vf.data), reinterpret_cast<char*>(vf.data) + vf.size);
 
-    // // 按照VideoFrame结构体序列化，且全部转为网络字节序
-    // std::vector<char> frameData;
-    // int cameraId = 0; // TODO: 替换为实际cameraId
-    // uint32_t netCameraId = htonl(cameraId);
-    // frameData.insert(frameData.end(), (char*)&netCameraId, (char*)&netCameraId + sizeof(netCameraId));
+        // 序列化完成
+        TLV tlv;
+        tlv.type = TASK_TYPE_GET_VIDEO_STREAM_RESP_OK;
+        tlv.length = frameData.size();
+        cout << "============序列化之后的长度=========" << tlv.length << endl;
+        // 直接发送 char data[65536]
+        //tlv.data = {0}; // 清空数据
+        memcpy(tlv.data, frameData.data(), frameData.size());
+        
+        // 把tlv数据详细打印出来
+        // cout << "TLV Data: ";
+        // for (size_t i = 0; i < tlv.length; ++i) {
+        //     cout << hex << static_cast<int>(tlv.data[i]) << " ";
+        // }
+        // cout << endl;
 
-    // uint32_t netSize = htonl(_avPacket->size);
-    // frameData.insert(frameData.end(), (char*)&netSize, (char*)&netSize + sizeof(netSize));
+        //_conn->sendInLoop(tlv);
+        cout << "sendToQtClient: sent packet of type and size " << tlv.type << " " << tlv.length << endl;
 
-    // uint64_t netPts = htobe64(_avPacket->pts);
-    // frameData.insert(frameData.end(), (char*)&netPts, (char*)&netPts + sizeof(netPts));
-
-    // uint64_t netDts = htobe64(_avPacket->dts);
-    // frameData.insert(frameData.end(), (char*)&netDts, (char*)&netDts + sizeof(netDts));
-
-    // frameData.insert(frameData.end(), (char*)_avPacket->data, (char*)_avPacket->data + dataLen);
-
-    // // 打印序列化内容
-    // printf("VideoFrame序列化: cameraId=%d, size=%d, pts=%ld, dts=%ld, dataLen=%d\n",
-    //        cameraId, _avPacket->size, _avPacket->pts, _avPacket->dts, dataLen);
-    // printf("序列化总长度: %zu\n", frameData.size());
-    // printf("前16字节: ");
-    // for (size_t i = 0; i < 16 && i < frameData.size(); ++i)
-    // {
-    //     printf("%02X ", (unsigned char)frameData[i]);
-    // }
-
-    // printf("\n");
-
-    // // 拷贝到TLV
-    // tlv.length = frameData.size();
-    // memcpy(tlv.data, frameData.data(), tlv.length);
-    // _conn->sendInLoop(tlv);
-    // sleep(5);
+        sleep(5);
     }
 }
 

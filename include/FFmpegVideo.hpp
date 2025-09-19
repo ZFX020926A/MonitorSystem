@@ -29,8 +29,9 @@ public:
 
     // 读取视频帧
     bool readFrame();
+
     // 发送视频帧到Qt客户端
-    void sendToQtClient();
+    void sendToQtClient(AVPacket &_avPacket);
 private:
 
     TcpConnectionPtr _conn;
